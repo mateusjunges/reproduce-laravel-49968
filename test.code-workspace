@@ -1,0 +1,13 @@
+{
+    "folders": [
+        {
+            "path": "..\/current"
+        },
+    ],
+    "settings": {
+        "better-phpunit.suiteSuffix": "--env=testing",
+        "better-phpunit.phpunitBinary": "export XDEBUG_SESSION=$USER; .\/vendor\/bin\/phpunit",
+        "better-phpunit.commandSuffix": "--stop-on-failure",
+        "terminal.integrated.cwd": "${workspaceFolder:current}",
+    }
+}
