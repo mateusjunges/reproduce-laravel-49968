@@ -10,7 +10,7 @@
     "require": {
         "php": "^8.1",
         "guzzlehttp\/guzzle": "^7.2",
-        "laravel\/framework": "^10.42.0",
+        "laravel\/framework": "10.43.0",
         "laravel\/sanctum": "^3.2",
         "laravel\/tinker": "^2.8"
     },
@@ -69,28 +69,5 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "path",
-            "url": "..\/..\/repo-10\/*\/*"
-        },
-        {
-            "type": "path",
-            "url": "..\/..\/package-repo\/packages\/*\/*",
-            "canonical": false
-        },
-        {
-            "type": "path",
-            "url": "..\/..\/package-repo\/packages-no-origin\/*\/*"
-        },
-        {
-            "type": "path",
-            "url": "..\/..\/package-repo\/packages-deprecated\/*\/*"
-        },
-        {
-            "type": "composer",
-            "url": "https:\/\/satis.avexcode.com"
-        }
-    ]
+    "prefer-stable": true
 }

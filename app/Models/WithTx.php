@@ -2,19 +2,21 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 trait WithTx
 {
-    public static function bootWithTx()
+    public static function bootWithTx(): void
     {
-        static::addGlobalScope('tx_and_sub_count', function (\Illuminate\Database\Eloquent\Builder $builder) {
-            $builder->withCount(['transactions as all_transactions_count' => function ($query) {
-            }]);
+        static::addGlobalScope('tx_and_sub_count', function (Builder $builder) {
+            $builder->withCount([
+                'transactions' => function ($query) {},
+            ]);
         });
     }
 
-    public function transactions()
+    public function transactions(): HasMany
     {
         return $this->hasMany(Transaction::class);
     }
